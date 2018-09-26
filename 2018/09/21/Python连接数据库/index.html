@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python,数据库," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Python2.x">
+<meta name="description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234import sqlite3conn=sqlite3.connect(&apos;test.db&apos;) #连接数据库test.db，若不存在">
+<meta name="keywords" content="Python,数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python连接数据库">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/Python连接数据库/index.html">
 <meta property="og:site_name" content="Wendy">
-<meta property="og:description" content="Python2.x">
+<meta property="og:description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234import sqlite3conn=sqlite3.connect(&apos;test.db&apos;) #连接数据库test.db，若不存在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T07:09:16.912Z">
+<meta property="og:updated_time" content="2018-09-25T11:44:42.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python连接数据库">
-<meta name="twitter:description" content="Python2.x">
+<meta name="twitter:description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234import sqlite3conn=sqlite3.connect(&apos;test.db&apos;) #连接数据库test.db，若不存在">
 
 
 
@@ -336,6 +337,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -363,8 +386,14 @@
       
 
       
-        <p>Python2.x</p>
-
+        <h1 id="Python连接关系型数据库"><a href="#Python连接关系型数据库" class="headerlink" title="Python连接关系型数据库"></a>Python连接关系型数据库</h1><h2 id="连接SQLite"><a href="#连接SQLite" class="headerlink" title="连接SQLite"></a>连接SQLite</h2><blockquote>
+<p>SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的</p>
+</blockquote>
+<ul>
+<li>连接SQLite数据库<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn=sqlite3.connect(<span class="string">'test.db'</span>) <span class="comment">#连接数据库test.db，若不存在则创建，可用绝对路径在其他目录中创建数据库</span></span><br><span class="line"><span class="comment">#conn=sqlite3.connect(':memory:') 在内存中创建数据库，用于测试，程序结束数据丢失</span></span><br><span class="line">curs=conn.cursor()  <span class="comment">#通过cursor对象来处理sql事务</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title="-"></a>-</h2><h2 id="连接MySQL"><a href="#连接MySQL" class="headerlink" title="连接MySQL"></a>连接MySQL</h2><h2 id="Python通用连接数据库模块sqlalchemy"><a href="#Python通用连接数据库模块sqlalchemy" class="headerlink" title="Python通用连接数据库模块sqlalchemy"></a>Python通用连接数据库模块sqlalchemy</h2><h1 id="Python连接非关系型数据库NoSQL"><a href="#Python连接非关系型数据库NoSQL" class="headerlink" title="Python连接非关系型数据库NoSQL"></a>Python连接非关系型数据库NoSQL</h1><h2 id="连接dbm数据库"><a href="#连接dbm数据库" class="headerlink" title="连接dbm数据库"></a>连接dbm数据库</h2><h2 id="连接memcached数据库"><a href="#连接memcached数据库" class="headerlink" title="连接memcached数据库"></a>连接memcached数据库</h2><h2 id="连接redis数据库"><a href="#连接redis数据库" class="headerlink" title="连接redis数据库"></a>连接redis数据库</h2>
       
     </div>
     
@@ -378,6 +407,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+        </div>
       
 
       
@@ -397,6 +434,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/26/HTTP协议/" rel="prev" title="HTTP协议">
+                HTTP协议 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -448,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -468,14 +518,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -511,6 +579,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python连接关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">Python连接关系型数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接SQLite"><span class="nav-number">1.1.</span> <span class="nav-text">连接SQLite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接MySQL"><span class="nav-number">1.3.</span> <span class="nav-text">连接MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python通用连接数据库模块sqlalchemy"><span class="nav-number">1.4.</span> <span class="nav-text">Python通用连接数据库模块sqlalchemy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python连接非关系型数据库NoSQL"><span class="nav-number">2.</span> <span class="nav-text">Python连接非关系型数据库NoSQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接dbm数据库"><span class="nav-number">2.1.</span> <span class="nav-text">连接dbm数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接memcached数据库"><span class="nav-number">2.2.</span> <span class="nav-text">连接memcached数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接redis数据库"><span class="nav-number">2.3.</span> <span class="nav-text">连接redis数据库</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
