@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/09/26/HTTP协议/status_2.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/26/HTTP协议/status_3.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/26/HTTP协议/response_headers.png">
-<meta property="og:updated_time" content="2018-09-26T10:12:04.295Z">
+<meta property="og:updated_time" content="2018-09-27T02:23:25.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP协议">
 <meta name="twitter:description" content="http协议属于OSI模型的应用层，是web服务使用的协议，用于传输web资源  相关概念web资源 静态文件资源：存放在web服务器文件系统中的资源(text,image,html等) 动态资源：软件程序根据需求动态生成的内容(根据客户端身份,请求，时间生成不同的内容   URI(统一资源标识符)，唯一标识和定位资源，分为两类: URN(统一资源名称):作为特定内容唯一名称使用，通过名称来标">
@@ -487,7 +487,10 @@
 <li>浏览器与服务器建立一条TCP/IP连接</li>
 <li>浏览器向服务器发送HTTP请求报文</li>
 <li>服务器向浏览器返回HTTP响应报文</li>
-<li>浏览器显示文档</li>
+<li>浏览器显示文档<blockquote>
+<font color="Blue">一个web页面包含多个资源对象，浏览器会先执行一个HTTP事务来获取描述页面布局的html框架，然后同时开启多个HTTP事务来获取每个嵌入式的图片java小程序等，这些嵌入式的资源可能位于不同的服务器上 </font>
+</blockquote>
+</li>
 </ol>
 <hr>
 <h3 id="http中间实体"><a href="#http中间实体" class="headerlink" title="http中间实体"></a>http中间实体</h3><h5 id="Gateways-网关"><a href="#Gateways-网关" class="headerlink" title="Gateways(网关)"></a>Gateways(网关)</h5><blockquote>
