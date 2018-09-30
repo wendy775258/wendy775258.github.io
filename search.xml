@@ -8,7 +8,9 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>apache | httpd | web server</tag>
+        <tag>apache</tag>
+        <tag>httpd</tag>
+        <tag>web server</tag>
       </tags>
   </entry>
   <entry>
@@ -19,7 +21,8 @@
         <category>HTTP</category>
       </categories>
       <tags>
-        <tag>http | web</tag>
+        <tag>http</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
