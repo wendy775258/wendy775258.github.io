@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/09/26/HTTP协议/status_2.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/26/HTTP协议/status_3.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/26/HTTP协议/response_headers.png">
-<meta property="og:updated_time" content="2018-09-30T05:07:11.541Z">
+<meta property="og:updated_time" content="2018-10-04T02:00:26.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP协议">
 <meta name="twitter:description" content="http协议属于OSI模型的应用层，是web服务使用的协议，用于传输web资源  相关概念web资源 静态文件资源：存放在web服务器文件系统中的资源(text,image,html等) 动态资源：软件程序根据需求动态生成的内容(根据客户端身份,请求，时间生成不同的内容   URI(统一资源标识符)，唯一标识和定位资源，分为两类: URN(统一资源名称):作为特定内容唯一名称使用，通过名称来标">
@@ -428,8 +428,10 @@
 <ul>
 <li><strong>GET</strong> :服务器向客户端发送命名资源</li>
 <li><strong>HEAD</strong>:服务器向客户端发送命名资源响应中的头部</li>
-<li><strong>POST</strong>:将客户端数据发送到服务器端网关的应用程序(如保存到我服务器数据库)</li>
-<li><strong>PUT</strong>: 将客户端数据存储到服务器中路径为request_url中，如路径已存在则覆盖原数据</li>
+<li><p><strong>POST</strong>:将客户端数据发送到服务器端网关的应用程序(如服务器数据库)以从而获得该指定数据,body中可以放入相当与GET方法后面的相对路径或关键词或表单(如用户名和密码来登录网站)等．可以有body,可以没有body</p>
+</li>
+<li><p><strong>PUT</strong>: 将客户端数据存储到服务器中路径为request_url中，如路径已存在则覆盖原数据</p>
+</li>
 <li><strong>OPTIONS</strong>：询问服务器对request_url资源支持哪些方法，若request_url为通配符，则表示服务器的通用方法</li>
 <li><strong>DELETE</strong>:请求服务器删除request_url资源，服务器有不通知客户端情况下撤销删除的权利</li>
 <li><strong>自定义方法</strong>，http允许服务器自行拓展方法，如比较流行的webDEV http拓展方法：LOCK:允许用户锁定资源，以防自己在操作时资源被他人修改；COPY:客户端复制服务器上资源；MOVE:移动服务器上资源等</li>
@@ -633,7 +635,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -644,7 +646,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -655,7 +657,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -724,7 +726,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

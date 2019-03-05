@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234import sqlite3conn=sqlite3.connect(&apos;test.db&apos;) #连接数据库test.db，若不存在">
+<meta name="description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234567891011121314151617181920212223242526import sqlite3 #连接数据库test">
 <meta name="keywords" content="Python,数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python连接数据库">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/Python连接数据库/index.html">
 <meta property="og:site_name" content="Wendy">
-<meta property="og:description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234import sqlite3conn=sqlite3.connect(&apos;test.db&apos;) #连接数据库test.db，若不存在">
+<meta property="og:description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234567891011121314151617181920212223242526import sqlite3 #连接数据库test">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T11:44:42.438Z">
+<meta property="og:updated_time" content="2019-03-05T07:30:17.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python连接数据库">
-<meta name="twitter:description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234import sqlite3conn=sqlite3.connect(&apos;test.db&apos;) #连接数据库test.db，若不存在">
+<meta name="twitter:description" content="Python连接关系型数据库连接SQLite SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的   连接SQLite数据库1234567891011121314151617181920212223242526import sqlite3 #连接数据库test">
 
 
 
@@ -390,10 +390,46 @@
 <p>SQLite是一种轻量级的保存在普通文件中(无服务器，无配置的事务型)开源数据库，它不依赖于机器和操作系统，方便移植。SQLite是用Python标准库实现的，因此Pythony引擎是内置的</p>
 </blockquote>
 <ul>
-<li>连接SQLite数据库<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn=sqlite3.connect(<span class="string">'test.db'</span>) <span class="comment">#连接数据库test.db，若不存在则创建，可用绝对路径在其他目录中创建数据库</span></span><br><span class="line"><span class="comment">#conn=sqlite3.connect(':memory:') 在内存中创建数据库，用于测试，程序结束数据丢失</span></span><br><span class="line">curs=conn.cursor()  <span class="comment">#通过cursor对象来处理sql事务</span></span><br></pre></td></tr></table></figure>
+<li>连接SQLite数据库<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"> <span class="comment">#连接数据库test.db，若不存在则创建，可用绝对路径在其他目录中创建数据库</span></span><br><span class="line">conn=sqlite3.connect(<span class="string">'test.db'</span>)</span><br><span class="line"><span class="comment">#conn=sqlite3.connect(':memory:') 在内存中创建数据库，用于测试，程序结束数据丢失</span></span><br><span class="line"></span><br><span class="line">curs=conn.cursor()  <span class="comment">#通过cursor对象来处理sql事务</span></span><br><span class="line">curs.execute(<span class="string">'sql语句'</span>) <span class="comment">#执行sql语句</span></span><br><span class="line"><span class="comment">#当sql命令较多时，将sql语句写在脚本中，然后运行脚本</span></span><br><span class="line">curs.executescript(open(<span class="string">'script.sql'</span>,<span class="string">'rt'</span>))</span><br><span class="line"><span class="comment">#使用占位符？，防止sql恶意注入</span></span><br><span class="line">curs.execute(<span class="string">'insert into users values(?,?)'</span>,(<span class="number">1</span>,<span class="string">"wendy"</span>)) </span><br><span class="line"></span><br><span class="line">＃使用cursor执行insert，update,delete,create,select语句,返回cursor对象</span><br><span class="line">curs.execute(<span class="string">'insert into table users values(2,"wendy");'</span>)</span><br><span class="line">curs.rowcount <span class="comment">#返回上次操作受影响的行数</span></span><br><span class="line"></span><br><span class="line">curs.execute(<span class="string">'select * from table users'</span>)</span><br><span class="line"><span class="comment">#将查询结果以tuple的形式在list中列出 </span></span><br><span class="line">result=curs.fetchall() </span><br><span class="line"></span><br><span class="line"><span class="comment"># 最重要的，在所有的修改都完成之后，要提交事物，才能实际修改磁盘上的数据库数据，否则数据没有变化</span></span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line"><span class="comment">#最后关闭链接</span></span><br><span class="line">curs.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id=""><a href="#" class="headerlink" title="-"></a>-</h2><h2 id="连接MySQL"><a href="#连接MySQL" class="headerlink" title="连接MySQL"></a>连接MySQL</h2><h2 id="Python通用连接数据库模块sqlalchemy"><a href="#Python通用连接数据库模块sqlalchemy" class="headerlink" title="Python通用连接数据库模块sqlalchemy"></a>Python通用连接数据库模块sqlalchemy</h2><h1 id="Python连接非关系型数据库NoSQL"><a href="#Python连接非关系型数据库NoSQL" class="headerlink" title="Python连接非关系型数据库NoSQL"></a>Python连接非关系型数据库NoSQL</h1><h2 id="连接dbm数据库"><a href="#连接dbm数据库" class="headerlink" title="连接dbm数据库"></a>连接dbm数据库</h2><h2 id="连接memcached数据库"><a href="#连接memcached数据库" class="headerlink" title="连接memcached数据库"></a>连接memcached数据库</h2><h2 id="连接redis数据库"><a href="#连接redis数据库" class="headerlink" title="连接redis数据库"></a>连接redis数据库</h2>
+<hr>
+<h2 id="连接MySQL"><a href="#连接MySQL" class="headerlink" title="连接MySQL"></a>连接MySQL</h2><blockquote>
+<p>不同的Python版本支持的MYSQL驱动不同，Python2.x支持MySQLdb驱动，Python3.x支持pymysql驱动</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql <span class="comment">#python2.x引入驱动:import MySQLdb</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#建立连接,port默认为mysql的3306,database为使用的数据库名</span></span><br><span class="line">conn=pymysql.connect(host,port,database,user,password)</span><br><span class="line"><span class="comment">#获得cursor对象</span></span><br><span class="line">curs=conn.cursor()</span><br><span class="line">curs.execute(<span class="string">'sql语句'</span>) <span class="comment">#运行sql语句</span></span><br><span class="line"></span><br><span class="line">curs.execute(<span class="string">'select * from table_name;'</span>)</span><br><span class="line">curs.fetchall() <span class="comment">#以元组的形式显示查询条目信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#最重要的一定要提交事务才能保存修改</span></span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line"><span class="comment">#最后关闭连接</span></span><br><span class="line">curs.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+<h2 id="Python通用连接数据库模块sqlalchemy"><a href="#Python通用连接数据库模块sqlalchemy" class="headerlink" title="Python通用连接数据库模块sqlalchemy"></a>Python通用连接数据库模块sqlalchemy</h2><blockquote>
+<p>使用sqlalchemy连接关系型数据库，可以不区分各种类型的数据库，统一代码，方便代码在各个数据库之间移植，支持ORM(对象关系映射)</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlalchemy</span><br><span class="line"><span class="comment">#建立连接</span></span><br><span class="line">conn=sqlalchemy.create_engine(<span class="string">'创建语句'</span>)</span><br><span class="line"><span class="comment">#创建语句格式：数据库类型＋驱动://用户名:密码＠服务器域名:端口号/初始连接数据库名</span></span><br><span class="line"><span class="comment">#端口号省略时为默认的各数据库类型的端口号</span></span><br><span class="line"><span class="comment">#创建SQLite连接，可以省略驱动用户名和密码</span></span><br><span class="line">conn=sqlalchemy.create_engine(<span class="string">'sqlite:///users.db'</span>)</span><br><span class="line"><span class="comment">#创建MySQL连接,使用users数据库</span></span><br><span class="line">conn=sqlalchemy.create_engine(<span class="string">'mysql+pymysql://root:wendy@localhost/users'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#直接执行sql语句开操作数据库</span></span><br><span class="line">conn.execute(<span class="string">'sql语句'</span>)  <span class="comment">#执行sql语句</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#通过ORM来操作数据库</span></span><br></pre></td></tr></table></figure>
+<h1 id="关系型数据库对比"><a href="#关系型数据库对比" class="headerlink" title="关系型数据库对比"></a>关系型数据库对比</h1><table>
+<thead>
+<tr>
+<th></th>
+<th>差别</th>
+<th>SQLite</th>
+<th>MYSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字符串符号</td>
+<td>“双引号”</td>
+<td>‘单引号’,”双引号”都可以</td>
+</tr>
+<tr>
+<td>数值自增</td>
+<td>INTEGER PRIMARY KEY字段</td>
+<td>AUTO_INCREMENT字段</td>
+</tr>
+<tr>
+<td>删除数据库</td>
+<td>直接删除文件，没有DROP语句</td>
+<td>DROP DATABASE 语句</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Python连接非关系型数据库NoSQL"><a href="#Python连接非关系型数据库NoSQL" class="headerlink" title="Python连接非关系型数据库NoSQL"></a>Python连接非关系型数据库NoSQL</h1><h2 id="连接dbm数据库"><a href="#连接dbm数据库" class="headerlink" title="连接dbm数据库"></a>连接dbm数据库</h2><h2 id="连接memcached数据库"><a href="#连接memcached数据库" class="headerlink" title="连接memcached数据库"></a>连接memcached数据库</h2><h2 id="连接redis数据库"><a href="#连接redis数据库" class="headerlink" title="连接redis数据库"></a>连接redis数据库</h2>
       
     </div>
     
@@ -518,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -529,7 +565,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -540,7 +576,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -589,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python连接关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">Python连接关系型数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接SQLite"><span class="nav-number">1.1.</span> <span class="nav-text">连接SQLite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接MySQL"><span class="nav-number">1.3.</span> <span class="nav-text">连接MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python通用连接数据库模块sqlalchemy"><span class="nav-number">1.4.</span> <span class="nav-text">Python通用连接数据库模块sqlalchemy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python连接非关系型数据库NoSQL"><span class="nav-number">2.</span> <span class="nav-text">Python连接非关系型数据库NoSQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接dbm数据库"><span class="nav-number">2.1.</span> <span class="nav-text">连接dbm数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接memcached数据库"><span class="nav-number">2.2.</span> <span class="nav-text">连接memcached数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接redis数据库"><span class="nav-number">2.3.</span> <span class="nav-text">连接redis数据库</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python连接关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">Python连接关系型数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接SQLite"><span class="nav-number">1.1.</span> <span class="nav-text">连接SQLite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接MySQL"><span class="nav-number">1.2.</span> <span class="nav-text">连接MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python通用连接数据库模块sqlalchemy"><span class="nav-number">1.3.</span> <span class="nav-text">Python通用连接数据库模块sqlalchemy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系型数据库对比"><span class="nav-number">2.</span> <span class="nav-text">关系型数据库对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python连接非关系型数据库NoSQL"><span class="nav-number">3.</span> <span class="nav-text">Python连接非关系型数据库NoSQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接dbm数据库"><span class="nav-number">3.1.</span> <span class="nav-text">连接dbm数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接memcached数据库"><span class="nav-number">3.2.</span> <span class="nav-text">连接memcached数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接redis数据库"><span class="nav-number">3.3.</span> <span class="nav-text">连接redis数据库</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -609,7 +645,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
